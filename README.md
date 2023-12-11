@@ -32,7 +32,7 @@ Choose Webhook and create a new Webhook. Once created, rename your Webhook and c
 
 You also need to enable Developer Mode to get the Message ID
 
-Create a .env file and add this line
+Create a ```.env``` file and add this line
 
 ```
 webhook = 'YOUR WEBHOOK URL'
