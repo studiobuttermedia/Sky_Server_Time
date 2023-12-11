@@ -101,3 +101,12 @@ MM is Minutes and HH is hour. Depending on your timezone, it may be different
 The second line is optional and only use if you also need to see China Reset time.
 
 Use the same time when the server reset to trigger the command on reset time. This will refresh the time message on Discord to the next reset time.
+
+## Optional Setting
+In the ```.env``` file, You can set your webhook to show a profile picture
+
+Adding this line will help
+
+```avatar = 'YOUR PFP URL'```
+
+**PLEASE NOTE THAT PROFILE PICTURES HOSTED USING DISCORD CDN WILL NOT WORK DUE TO CHANGES TO DISCORD BACKEND.**  You can use [Tixte](https://tixte.com/) to host your profile images.
