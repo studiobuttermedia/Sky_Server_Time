@@ -41,7 +41,7 @@ global_hour = 'HOUR WHEN SKY SERVER RESET'
 global_minute = 'MINUTES WHEN SKY SERVER RESET'
 ```
 
-You can check when Sky server reset for you by going to [this website](https://sky-clock.netlify.app/), and check the "Daily Reset" Section, "Next Event" Column. Two digits on the left correspond with hour.
+You can check when Sky server reset for you by going to [this website](https://sky-clock.netlify.app/), and check the "Daily Reset" Section, "Next Event" Column. Two digits on the left correspond with hour and two digits on the right correspond with minutes.
 
 It should look like this
 
