@@ -2,7 +2,4 @@
 /.venv
 time.txt
 check_time.py
-webhook_loop.py
-webhook_loop_next.py
-
-# Remove from release
+/V1

@@ -38,7 +38,7 @@ while True:
       print('Setting Server Time (Sky - NetEase/BiliBili Server)')
       cn_unix = cn_tomorrow.timestamp()
       with open('time.txt', 'r') as l:
-         la_cache = l.read
+         la_cache = str(l.read())
          a = requests.patch(url + '/messages/' + message_id, data={
     'username': 'Sky Time',
     'avatar_url': 'avatar',
