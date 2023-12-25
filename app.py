@@ -36,7 +36,7 @@ while True:
    elif cn_time.hour == 00 and cn_time.minute == 00:
       cn_tomorrow = cn_time + datetime.timedelta(days=1)
       print('Setting Server Time (Sky - NetEase/BiliBili Server)')
-      cn_unix = cn_tomorrow.timestamp()
+      cn_unix = int(cn_tomorrow.timestamp())
       with open('time.txt', 'r') as l:
          la_cache = str(l.read())
          a = requests.patch(url + '/messages/' + message_id, data={
