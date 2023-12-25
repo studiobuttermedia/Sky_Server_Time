@@ -1,4 +1,4 @@
 .env
 /.venv
-time.txt
-check_time.py
+/time.txt
+/check_time.py

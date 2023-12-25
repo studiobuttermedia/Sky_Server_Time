@@ -19,21 +19,21 @@ while True:
 
    cn_tz = pytz.timezone('Asia/Shanghai')
    cn_time = datetime.datetime.now(cn_tz)
-   if la_time.hour == 00:
+   if la_time.hour == 00 and la_time.minute == 00:
       la_tomorrow = la_time + datetime.timedelta(days=1)
       print('Setting Server Time (Sky - Global Server)')
       la_unix = int(la_tomorrow.timestamp())
       with open('time.txt', 'r') as c:
-         cn_cache = c.read
+         cn_cache = str(c.read())
       y = requests.patch(url + '/messages/' + message_id, data={
     'username': 'Sky Time',
     'avatar_url': 'avatar',
     'content': 'Global: Server Reset <t:' + str(la_unix) + ':R>\nChina: Server Reset <t:' + 
-    cn_cache + ':R>'})
+    cn_cache+ ':R>'})
       c.close
       with open('time.txt', 'w') as f:
          f.write(str(la_unix))
-   elif cn_time.hour == 00:
+   elif cn_time.hour == 00 and cn_time.minute == 00:
       cn_tomorrow = cn_time + datetime.timedelta(days=1)
       print('Setting Server Time (Sky - NetEase/BiliBili Server)')
       cn_unix = cn_tomorrow.timestamp()
