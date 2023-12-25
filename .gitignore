@@ -1,3 +1,4 @@
 .env
 /.venv
 time.txt
+check_time.py
