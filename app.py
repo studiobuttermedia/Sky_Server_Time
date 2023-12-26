@@ -1,3 +1,5 @@
+import signal
+import sys
 import requests
 import time
 import datetime
@@ -6,11 +8,26 @@ import pytz
 from dotenv import load_dotenv
 import os
 
+filename = "time.txt"
+if not os.path.isfile(filename):
+   open(filename, "w").close()
+   print(f"Cache File '{filename}' was created. Please do not delete this file when the application is running")
+   print(f"To interrupt this program, press CTRL + C (CMD + C)")
+else:
+   print(f"Cache file '{filename}' exists. Reusing file. Please do not delete this file when the application is running")
+   print(f"To interrupt this program, press CTRL + C (CMD + C)")
+
 load_dotenv()
 
 url = os.getenv('webhook')
 message_id = os.getenv('message_id')
 avatar = os.getenv('avatar')
+
+def handle_interrupt(signal, frame):
+   print(f"Exiting Program")
+   sys.exit(0)
+
+signal.signal(signal.SIGINT, handle_interrupt)
 
 while True:
    # Perform the desired operations here
