@@ -15,6 +15,18 @@ On Linux (Ubuntu for now), you can use this command
 
 ```sudo apt install python3.11```
 
+Optional but if you want to: Setting Up the bot does mean using a Text Editor to add some required codes to make the program work. So I recommend using either [Visual Studio Code](https://code.visualstudio.com/download) or [Notepad++ - Windows only](https://notepad-plus-plus.org/downloads/) but you can use either Notepad or run ```nano``` to add codes
+
+You can run this command on Windows to install them:
+
+```winget install Microsoft.VisualStudioCode```
+
+or
+
+```winget install Notepad++.Notepad++```
+
+For Ubuntu Linux, [click here](https://snapcraft.io/code)
+
 Download the [latest release package](https://github.com/studiobuttermedia/Sky_Server_Time/releases/tag/release). (There's currently no version for Seperate server yet.)
 
 Extract the downloaded package to a folder you want to store. 
@@ -58,11 +70,11 @@ webhook='https://discord.com/api/webhooks/.../...'
 message_id=''
 ```
 
-You can try testing your Webhook to see if it works by running "webhook_test.py" using this command
+You can try testing your Webhook to see if it works. Return to your Command Prompt/Terminal and run "webhook_test.py" using this command
 
 ```python webhook_test.py```
 
-Once run, you should see a message to copy the message ID. Right Click on the message ,choose copy message ID and return to your .env. DO NOT DELETE THE MESSAGE
+Once run, you should see a message to copy the message ID. Right Click on the message, choose copy message ID and return to your .env. DO NOT DELETE THE MESSAGE
 
 Paste in your Message ID, it should look like this
 
@@ -70,9 +82,9 @@ Paste in your Message ID, it should look like this
 
 Now try run this command to see if the time reset message works or not
 
-```python webhook_loop.py```
+```python app.py```
 
-If it does! Congrats! Your Webhook is working!
+You should see a message on Terminal saying Cache file and such. Wait a while till reset time to see if it works. If it does! Congrats! Your Webhook server is working!
 
 ## Automations
 Version 1.1 recently added ability to always running. But you will need to manually setup the program to start after your PC or Server restart or something.
@@ -85,3 +97,8 @@ Adding this line will help
 ```avatar = 'YOUR PFP URL'```
 
 **PLEASE NOTE THAT PROFILE PICTURES HOSTED USING DISCORD CDN WILL NOT WORK DUE TO CHANGES TO DISCORD BACKEND.**  You can use [Tixte](https://tixte.com/) to host your profile images.
+
+# Special Thanks and notes from me
+Special Thanks to [Genshin Wizard](https://github.com/Genshin-Wizard) and the official Genshin Server! Their Server Time system was the Inspiration for this project. 
+
+This project was made from days after asking Microsoft Copilot some help and experimenting with my own codes to see if anything is working.
