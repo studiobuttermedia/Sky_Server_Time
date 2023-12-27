@@ -17,9 +17,21 @@ On Linux (Ubuntu for now), you can use this command
 
 Download the [latest release package](https://github.com/studiobuttermedia/Sky_Server_Time/releases/tag/release). (There's currently no version for Seperate server yet.)
 
-Extract the downloaded package to a folder you want to store
+Extract the downloaded package to a folder you want to store. 
 
-After that, run this command to install the required packages to run the server
+After that, Open Command Prompt/Terminal to that folder.
+
+To go to a folder, use ```cd``` command.
+
+```
+cd to/directory/you/want/to/go
+```
+
+Each words after ```/``` is a folder. To go to a folder that has space in the folder name, use Quotation Marks.
+
+To go back, type ```cd ..```
+
+Now you know the basic of going to folder using commands, run this command to install the required packages to run the server. 
 
 ```pip install -r requirements.txt```
 
