@@ -59,8 +59,8 @@ while True:
          a = requests.patch(url + '/messages/' + message_id, data={
     'username': 'Sky Time',
     'avatar_url': 'avatar',
-    'content': 'Global: Server Reset <t:' + str(cn_unix) + ':R>\nChina: Server Reset <t:' + 
-    la_cache + ':R>'})
+    'content': 'Global: Server Reset <t:' + la_cache + ':R>\nChina: Server Reset <t:' + 
+    str(cn_unix) + ':R>'})
          a.close
          with open('time.txt', 'w') as z:
             z.write(str(cn_unix))
