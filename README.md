@@ -63,7 +63,7 @@ Now try run this command to see if the time reset message works or not
 If it does! Congrats! Your Webhook is working!
 
 ## Automations
-Version 1.1 recently added ability to always running. But you will need to setup the program to start after your PC or Server restart or something.
+Version 1.1 recently added ability to always running. But you will need to manually setup the program to start after your PC or Server restart or something.
 
 ## Optional Setting
 In the ```.env``` file, You can set your webhook to show a profile picture
