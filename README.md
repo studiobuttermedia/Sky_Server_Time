@@ -15,7 +15,7 @@ On Linux (Ubuntu for now), you can use this command
 
 ```sudo apt install python3.11```
 
-Download the release package. Choose if you want the GB.zip, CN.zip or GBCN.zip
+Download the [latest release package](https://github.com/studiobuttermedia/Sky_Server_Time/releases/tag/release). (There's currently no version for Seperate server yet.)
 
 Extract the downloaded package to a folder you want to store
 
