@@ -8,14 +8,19 @@ import pytz
 from dotenv import load_dotenv
 import os
 
+server_now = datetime.datetime.now()
+log_time = server_now.strftime("%Y-%m-%d %H:%M:%S")
+
 filename = "time.txt"
 if not os.path.isfile(filename):
    open(filename, "w").close()
    print(f"Cache File '{filename}' was created. Please do not delete this file when the application is running")
    print(f"To interrupt this program, press CTRL + C (CMD + C)")
+   print(f'[{log_time}] Running Program')
 else:
    print(f"Cache file '{filename}' exists. Reusing file. Please do not delete this file when the application is running")
    print(f"To interrupt this program, press CTRL + C (CMD + C)")
+   print(f'[{log_time}] Running Program')
 
 load_dotenv()
 
@@ -38,7 +43,7 @@ while True:
    cn_time = datetime.datetime.now(cn_tz)
    if la_time.hour == 00 and la_time.minute == 00:
       la_tomorrow = la_time + datetime.timedelta(days=1)
-      print('Setting Server Time (Sky - Global Server)')
+      print(f'[{log_time}] Setting Server Time (Sky - Global Server)')
       la_unix = int(la_tomorrow.timestamp())
       with open('time.txt', 'r') as c:
          cn_cache = str(c.read())
@@ -52,7 +57,7 @@ while True:
          f.write(str(la_unix))
    elif cn_time.hour == 00 and cn_time.minute == 00:
       cn_tomorrow = cn_time + datetime.timedelta(days=1)
-      print('Setting Server Time (Sky - NetEase/BiliBili Server)')
+      print(f'[{log_time}] Setting Server Time (Sky - NetEase/BiliBili Server)')
       cn_unix = int(cn_tomorrow.timestamp())
       with open('time.txt', 'r') as l:
          la_cache = str(l.read())
