@@ -1,7 +1,9 @@
 # Sky Server Time
 A kinda simple Python files that use to track Server Reset time for Sky: Children of the Light, supports for Global server, NetEase server and BiliBili server
 
-README File on GitHub may be different from the README File in the package download. Requires a spare PC or a Cloud Server
+README File on GitHub may be different from the README File in the package download. Requires a spare PC or a Cloud Server.
+
+This project isn't affliate with thatgamecompany and does not connect to any server (including NetEase and BiliBili) other than Discord's Server Webhook that you the end user supply. 
 
 ## Setting up - Server side
 
