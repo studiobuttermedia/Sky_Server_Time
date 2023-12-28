@@ -15,11 +15,35 @@ On Linux (Ubuntu for now), you can use this command
 
 ```sudo apt install python3.11```
 
-Download the release package. Choose if you want the GB.zip, CN.zip or GBCN.zip
+Optional but if you want to: Setting Up the bot does mean using a Text Editor to add some required codes to make the program work. So I recommend using either [Visual Studio Code](https://code.visualstudio.com/download) or [Notepad++ - Windows only](https://notepad-plus-plus.org/downloads/) but you can use either Notepad or run ```nano``` to add codes
 
-Extract the downloaded package to a folder you want to store
+You can run this command on Windows to install them:
 
-After that, run this command to install the required packages to run the server
+```winget install Microsoft.VisualStudioCode```
+
+or
+
+```winget install Notepad++.Notepad++```
+
+For Ubuntu Linux, [click here](https://snapcraft.io/code)
+
+Download the [latest release package](https://github.com/studiobuttermedia/Sky_Server_Time/releases/tag/release). (There's currently no version for Seperate server yet.)
+
+Extract the downloaded package to a folder you want to store. 
+
+After that, Open Command Prompt/Terminal to that folder.
+
+To go to a folder, use ```cd``` command.
+
+```
+cd to/directory/you/want/to/go
+```
+
+Each words after ```/``` is a folder. To go to a folder that has space in the folder name, use Quotation Marks.
+
+To go back, type ```cd ..```
+
+Now you know the basic of going to folder using commands, run this command to install the required packages to run the server. 
 
 ```pip install -r requirements.txt```
 
@@ -37,37 +61,20 @@ Create a ```.env``` file and add this line
 ```
 webhook = 'YOUR WEBHOOK URL'
 message_id =
-global_hour = 'HOUR WHEN SKY SERVER RESET'
-global_minute = 'MINUTES WHEN SKY SERVER RESET'
 ```
-
-You can check when Sky server reset for you by going to [this website](https://sky-clock.netlify.app/), and check the "Daily Reset" Section, "Next Event" Column. Two digits on the left correspond with hour and two digits on the right correspond with minutes.
 
 It should look like this
 
 ```
 webhook='https://discord.com/api/webhooks/.../...'
 message_id=''
-global_hour = '23'
-global_minute = '00'
 ```
 
-If you also play China server, add the following lines
-
-```
-china_hour = '18'
-china_minute = '00'
-```
-
-Depending on your timezone, it maybe different. China server reset at 12 am (UTC+8). Use a time converter website to see when is that time at your local time.
-
-Numbers shown are just for filler, please use the website to see when the server reset.
-
-You can try testing your Webhook to see if it works by running "webhook_test.py" using this command
+You can try testing your Webhook to see if it works. Return to your Command Prompt/Terminal and run "webhook_test.py" using this command
 
 ```python webhook_test.py```
 
-Once run, you should see a message to copy the message ID. Right Click on the message ,choose copy message ID and return to your .env. DO NOT DELETE THE MESSAGE
+Once run, you should see a message to copy the message ID. Right Click on the message, choose copy message ID and return to your .env. DO NOT DELETE THE MESSAGE
 
 Paste in your Message ID, it should look like this
 
@@ -75,32 +82,12 @@ Paste in your Message ID, it should look like this
 
 Now try run this command to see if the time reset message works or not
 
-```python webhook_loop.py```
+```python app.py```
 
-If it does! Congrats! Your Webhook is working!
+You should see a message on Terminal saying Cache file and such. Wait a while till reset time to see if it works. If it does! Congrats! Your Webhook server is working!
 
 ## Automations
-Setting up so the message updates every reset.
-
-On Windows, use Task Scheduler. Tho I'm used to Scheduling task on Linux and Windows is bit complicated
-
-On Linux (Ubuntu), use crontab with this command
-
-```crontab -e```
-
-If it ask, choose 1
-
-Scroll down and enter the following:
-
-```mm hh * * * /bin/python3 /where/your/webhook_loop.py```
-
-```mm hh * * * /bin/python3 /where/your/webhook_loop_next.py```
-
-MM is Minutes and HH is hour. Depending on your timezone, it may be different
-
-The second line is optional and only use if you also need to see China Reset time.
-
-Use the same time when the server reset to trigger the command on reset time. This will refresh the time message on Discord to the next reset time.
+Version 1.1 recently added ability to always running. But you will need to manually setup the program to start after your PC or Server restart or something.
 
 ## Optional Setting
 In the ```.env``` file, You can set your webhook to show a profile picture
@@ -110,3 +97,8 @@ Adding this line will help
 ```avatar = 'YOUR PFP URL'```
 
 **PLEASE NOTE THAT PROFILE PICTURES HOSTED USING DISCORD CDN WILL NOT WORK DUE TO CHANGES TO DISCORD BACKEND.**  You can use [Tixte](https://tixte.com/) to host your profile images.
+
+# Special Thanks and notes from me
+Special Thanks to [Genshin Wizard](https://github.com/Genshin-Wizard) and the official Genshin Server! Their Server Time system was the Inspiration for this project. 
+
+This project was made from days after asking Microsoft Copilot some help and experimenting with my own codes to see if anything is working.
