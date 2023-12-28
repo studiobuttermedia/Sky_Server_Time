@@ -1,5 +1,5 @@
 # Sky Server Time
-A kinda simple Python files that use to track Server Reset time for Sky: Children of the Light, supports for Global server, NetEase server and China server
+A kinda simple Python files that use to track Server Reset time for Sky: Children of the Light, supports for Global server, NetEase server and BiliBili server
 
 ## Setting up - Server side
 
