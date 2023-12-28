@@ -29,7 +29,7 @@ message_id = os.getenv('message_id')
 avatar = os.getenv('avatar')
 
 def handle_interrupt(signal, frame):
-   print(f"Exiting Program")
+   print(f"[{log_time}] Exiting Program")
    sys.exit(0)
 
 signal.signal(signal.SIGINT, handle_interrupt)
