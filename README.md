@@ -64,14 +64,14 @@ You also need to enable Developer Mode to get the Message ID
 
 Create a ```.env``` file and add this line
 
-```json
+```ruby
 webhook = 'YOUR WEBHOOK URL'
 message_id =
 ```
 
 It should look like this
 
-```json
+```ruby
 webhook='https://discord.com/api/webhooks/.../...'
 message_id=''
 ```
