@@ -90,7 +90,7 @@ Now try run this command to see if the time reset message works or not
 
 ```python app.py```
 
-You should see a message on Terminal saying Cache file and such. Wait a while till reset time to see if it works. If it does! Congrats! Your Webhook server is working!
+You should see a message on Terminal saying Cache file and such (depending on the release you choose). Wait a while till reset time to see if it works. If it does! Congrats! Your Webhook server is working!
 
 ## Automations
 
@@ -111,3 +111,6 @@ Adding this line will help
 Special Thanks to [Genshin Wizard](https://github.com/Genshin-Wizard) and the official Genshin Server! Their Server Time system was the Inspiration for this project.
 
 This project was made from days after asking Microsoft Copilot some help and experimenting with my own codes to see if anything is working.
+
+# Donation
+If you wish to support our project then we have a [Ko-fi page!](https://ko-fi.com/studiobutterteam)
