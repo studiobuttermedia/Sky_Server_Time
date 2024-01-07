@@ -29,17 +29,17 @@ signal.signal(signal.SIGINT, handle_interrupt)
 
 while True:
    # Perform the desired operations here
-   la_tz = pytz.timezone('America/Los_Angeles')
-   la_time = datetime.datetime.now(la_tz)
+   tz = pytz.timezone('America/Los_Angeles')
+   current_time = datetime.datetime.now(tz)
 
-   if la_time.hour == 00 and la_time.minute == 00:
-      la_tomorrow = la_time + datetime.timedelta(days=1)
+   if current_time.hour == 00 and current_time.minute == 00:
+      tomorrow = current_time + datetime.timedelta(days=1)
       print(f'[{log_time}] Setting Server Time')
-      la_unix = int(la_tomorrow.timestamp())
+      unix = int(tomorrow.timestamp())
       y = requests.patch(url + '/messages/' + message_id, data={
     'username': 'Sky Time',
     'avatar_url': 'avatar',
-    'content': 'Global: Server Reset <t:' + str(la_unix) + ':R>'})
+    'content': 'Server Reset <t:' + str(unix) + ':R>'})
       pass
 
    # Delay execution for 5 minutes
