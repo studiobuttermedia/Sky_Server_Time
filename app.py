@@ -15,12 +15,11 @@ filename = "time.txt"
 if not os.path.isfile(filename):
    open(filename, "w").close()
    print(f"Cache File '{filename}' was created. Please do not delete this file when the application is running")
-   print(f"To interrupt this program, press CTRL + C (CMD + C)")
-   print(f'[{log_time}] Running Program')
 else:
    print(f"Cache file '{filename}' exists. Reusing file. Please do not delete this file when the application is running")
-   print(f"To interrupt this program, press CTRL + C (CMD + C)")
-   print(f'[{log_time}] Running Program')
+
+print(f"To interrupt this program, press CTRL + C (CMD + C)")
+print(f'[{log_time}] Running Program')
 
 load_dotenv()
 
