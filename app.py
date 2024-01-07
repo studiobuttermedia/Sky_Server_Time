@@ -29,7 +29,7 @@ signal.signal(signal.SIGINT, handle_interrupt)
 
 while True:
    # Perform the desired operations here
-   tz = pytz.timezone('America/Los_Angeles')
+   tz = pytz.timezone('Asia/Shanghai')
    current_time = datetime.datetime.now(tz)
 
    if current_time.hour == 00 and current_time.minute == 00:
