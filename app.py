@@ -50,7 +50,7 @@ while True:
     'username': 'Sky Time',
     'avatar_url': 'avatar',
     'content': 'Global: Server Reset <t:' + str(la_unix) + ':R>\nChina: Server Reset <t:' + 
-    cn_cache+ ':R>'})
+    cn_cache+ ':R>\nSparkle was here'})
       c.close
       with open('time.txt', 'w') as f:
          f.write(str(la_unix))
@@ -64,7 +64,7 @@ while True:
     'username': 'Sky Time',
     'avatar_url': 'avatar',
     'content': 'Global: Server Reset <t:' + la_cache + ':R>\nChina: Server Reset <t:' + 
-    str(cn_unix) + ':R>'})
+    str(cn_unix) + ':R>\nSparkle was here'})
          a.close
          with open('time.txt', 'w') as z:
             z.write(str(cn_unix))
