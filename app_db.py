@@ -12,6 +12,7 @@ def create_connection():
 
 if __name__ == "__main__":
     db_connection = create_connection()
+    print("Connection Created!")
     # Now you can use the connection for queries, inserts, etc.
 
 # Example query execution
@@ -23,3 +24,4 @@ try:
         print(result)
 finally:
     db_connection.close()
+    print('Connection Close')
