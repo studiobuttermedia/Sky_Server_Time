@@ -6,3 +6,4 @@ time.txt
 test.py
 /Test Files
 db_config.py
+/__pycache__
