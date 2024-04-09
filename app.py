@@ -8,6 +8,8 @@ import pytz
 from dotenv import load_dotenv
 import os
 
+os.system('cls' if os.name == 'nt' else 'clear')
+
 server_now = datetime.datetime.now()
 log_time = server_now.strftime("%Y-%m-%d %H:%M:%S")
 
