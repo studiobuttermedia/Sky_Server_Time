@@ -25,6 +25,8 @@ print(f'[{log_time}] Running Program')
 
 load_dotenv()
 
+# Use dotenv for Discord Bot and any save infomation should be save on an SQL Database
+
 url = os.getenv('webhook')
 message_id = os.getenv('message_id')
 avatar = os.getenv('avatar')
@@ -34,6 +36,8 @@ def handle_interrupt(signal, frame):
    sys.exit(0)
 
 signal.signal(signal.SIGINT, handle_interrupt)
+
+# When the time is updated, update the infomation and send a message to ping the required role to notify others.
 
 while True:
    # Perform the desired operations here
@@ -72,6 +76,8 @@ while True:
             z.write(str(cn_unix))
    else: 
       pass
+
+# Add some codes to notify about in-game hourly events (Geyser, Grandma, etc...)
 
    # Delay execution for 5 minutes
    time.sleep(60)  # 300 seconds = 5 minutes
